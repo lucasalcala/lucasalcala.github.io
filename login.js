@@ -20,7 +20,7 @@ function validate()
 		{
 			document.getElementById("password").disabled = true;
 			document.getElementById("submit").disabled = true;
-		return false;
+			return false;
 		}
 	}
 }
