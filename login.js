@@ -1,5 +1,12 @@
 
-var attempt = 3; // Variable to count number of attempts.
+/*
+	Script that validates the username and password from the users input
+
+*/
+
+// Variable to count number of attempts.
+var attempt = 3;
+
 // Below function Executes on click of login button.
 function validate()
 {
@@ -8,14 +15,13 @@ function validate()
 	
 	if ( username == "marriott" && password == "marriott2018")
 	{
-		alert ("Login successfully");
 		window.location = "home.html"; // Redirecting to other page.
 		return false;
 	}
 	else
 	{
 		attempt --;// Decrementing by one.
-		alert("Tienes "+attempt+" intentos;");
+		alert("Lo siento, la contraseña es incorrecta. Tienes "+attempt+" intentos");
 		// Disabling fields after 3 attempts.
 		if( attempt == 0)
 		{
