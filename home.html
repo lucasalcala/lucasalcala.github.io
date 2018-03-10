@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang=es>
+<title>At Your Service - Marriott Santa Cruz</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="jscript.js"></script> 
+<script src="search.js"></script> 
+
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold; background-image:url(123.jpg); color: white" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+	<div class="w3-container">
+		<h3 class="w3-padding-64"><b>At Your Service</b></h3>
+	</div>	
+	<div class="w3-bar-block">
+    	<a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    	<a href="#novedades" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Novedades</a> 
+    	<a href="#servicios" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Servicios</a> 
+    	<a href="#infoasociados" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Info Asociados</a> 
+    	<a href="#extras" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Extras</a> 
+  	</div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Marriott</span>
+</header>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<!--
+	******************************	
+	*	!PAGE CONTENT!           *
+	*	Contenido de la pagina.  * 
+	******************************
+-->	
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="novedades">
+    <h1 class="w3-jumbo"><b>Marriott Santa Cruz</b></h1>
+	<!-- Links -->
+	<a href="https://www.facebook.com/MarriottSantaCruz/"><img src="img/facebook.png" alt="Facebook" style="width:42px;height:42px;border:0;"></a>
+	<a href="https://www.instagram.com/marriottsantacruz/"><img src="img/instagram.png" alt="Instagram" style="width:42px;height:42px;border:0;"></a>
+	<a href="http://www.marriott.com/VVIMC"><img src="img/web.png" alt="Web" style="width:42px;height:42px;border:0;"></a>
+	
+    <h1 class="w3-xxxlarge " style="color: #9f1e29"><b>Novedades</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- 
+  	   ***************************************PERMITIDO MODIFICAR****************************************************
+   	   * Imagenes en Novedades                                                                                      *
+  	   *                                                                                                            *
+	   * Para nuevo documento cambiar el src con el destino del documento y alt para descripcion dentro de <img>    *
+	   * ejemplo:                                                                                                   *
+	   *			src="novedades/cena_romance.jpg"                                                                *
+	   *			alt="Cena en el Toborochi"                                                                      *
+       **************************************************************************************************************
+  -->
+  
+  <div class="w3-row-padding" style="background-color: #808080; padding-bottom: 25px; border: 2px solid black; border-radius: 5px;">
+    <div style="cursor:pointer; opacity:1;padding-top: 25px">
+	 
+	  <img src="novedades/dia_padre.jpg" alt="Dia del padre en Toborochi" style="width:30%; padding-left: 50px;" onclick="onClick(this)">	
+	 
+	  <img src="novedades/semana_santa.jpg" alt="Paquete de semana santa " style="width:30%; padding-left: 50px;" onclick="onClick(this)">	
+	  <img src="novedades/out_office0903.jpg" alt="Out of office!!!" style="width:30%; padding-left: 50px;" onclick="onClick(this)">
+	  
+	  <img src="novedades/menuejecutivo.jpg" alt="Menu Ejecutivo" style="width:30%; padding-left: 50px;" onclick="onClick(this)">
+	  
+	  <img src="novedades/spa.jpg" alt="Servicios de Spa" style="width:30%; padding-left: 50px;" onclick="onClick(this)">
+	 
+      <img src="novedades/cena_romance.jpg" alt="Cena en el Toborochi" onclick="onClick(this)" style="width:30%; padding-left: 50px">
+      
+	  <img src="novedades/honeymoon.jpg" alt="Paquete de luna de miel" onclick="onClick(this)" style="width:30%; padding-left: 50px">
+      
+	  <img src="novedades/romance.jpg" alt="Paquete romantico" onclick="onClick(this)" style="width:30%; padding-left: 50px">
+ 	 
+	 </div>
+  </div>
+
+  <!-- 
+  	  ***********************NO MODIFICAR*************************
+  	  *  Modal for full size images on click                     *
+  	  ************************************************************
+  -->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image" alt="img" src="">
+      <p id="caption"></p>
+    </div>
+  </div>
+	
+<!-- 
+
+	*****************PERMITIDO MODIFICAR**************
+  	*	Descripcion en novedades.                    *
+  	*	<br> para nuevo parrafo                      *
+  	************************************************** 
+
+  -->
+  <div style = "background-color: #e6e6e6" >
+  <p style = "padding-bottom: 25px">	
+  
+  		Contamos con los siguientes números de discado rápido, esto con el fin de facilitar el llamado a números de emergencia y de 		asociados con números corporativos. <br>
+	
+		<input type="button" value="Internos" onclick="window.location.href='infoasociados/internos.pdf'" />
+  </p>	
+  </div>
+  
+  <div style = "background-color: #e6e6e6" >		
+  <p style = "padding-bottom: 25px">
+  
+  		Almuerzo Buffet, todos los domingos en el Toborochi:<br>
+		De 12:30 a 15 hs.<br>
+		Consta de entradas, fondos, cocina en vivo, y mesa de postres.<br>
+		No incuye bebidas.<br>
+		El precio es Bs 159 por adulto.<br>
+		Menores de 12 años Bs 80.<br>
+  </p>
+  </div>
+  
+  <div style = "background-color: #e6e6e6" >
+  <p style = "padding-bottom: 25px">
+  
+		Menú ejecutivo:<br>
+		De lunes a viernes de 12:30 hs a 15 hs.<br>
+		Precio: Bs 89<br>
+		incuye: 1 entrada + 1 fondo + 1 postre + 1 bebida sin alcohol o un jugo.<br>
+		El cliente puede elegir entre 2 opciones de entrada y 2 de fondo, las cuales cambian día a día.
+  
+  </p>
+  </div>
+	
+  <!--
+  	  ********************************************* 
+   	  *                                           *
+	  *           		Servicios                 *
+      *                                           *
+	  *********************************************
+  -->
+  
+  <div class="w3-container" id="servicios" style="margin-top:75px">
+    <h1 class="w3-xxxlarge" style="color: #9f1e29"><b>Servicios</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+
+  <div class="w3-row-padding w3-grayscale">  
+   
+   <!-- toborochi -->
+   <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+		<a href="pdf/toborochi.pdf">
+		  <img src="img/toborochi.jpg" alt="toborochi" style="width:49%">
+		</a>		
+		<a href="pdf/terraza.pdf">
+		  <img src="img/terraza.jpg" alt="terraza" style="width:49%">
+		</a>	
+        <div class="w3-container">
+          <h3>Toborochi</h3>
+          <p>Desayuno: 06:30am - 11:30am</p>
+		  <p>Almuerzo: 12:30pm - 15:00pm</p>
+		  <p>Cena:     19:00pm - 00:00am</p>
+        </div>
+      </div>
+    </div>
+	
+	<!-- blue macaw -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">	
+		<a href="pdf/bm_dia.pdf">
+		  <img src="img/bluemacaw.jpg" alt="bluemacawdia" style="width:49%">
+		</a>
+		<a href="pdf/bm_noche.pdf">
+		  <img src="img/bluemacawnoche.jpg" alt="bluemacawnoche" style="width:49%">
+		</a>
+		<div class="w3-container">
+          <h3>Blue Macaw</h3>
+          <p>Bar: 08:00am - 01:00am</p>
+		  <p>Sushi: 19:00pm - 01:00am</p>
+		  <p> <br> </p>
+		  
+        </div>
+      </div>
+    </div>
+	
+	<!-- pool bar -->
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+		
+		<a href="pdf/poolbar.pdf">
+		  <img src="img/pool.jpg" alt="poolbar" style="width:50%">
+		</a>
+		
+		  <img src="img/piscina.jpg" alt="poolbar" style="width:46%">
+		
+        <div class="w3-container">
+          <h3>Pool Bar</h3>
+          <p>Horario: 11:00am - 20:00pm</p>
+		  <p> <br> </p>
+		  <p> <br> </p>
+		  
+        </div>
+      </div>
+   	</div>
+	
+	<!-- room service -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+
+		<a href="pdf/roomservice_es.pdf">
+		  <img src="img/roomserv.jpg" alt="roomservicees" style="width:48%">
+		</a>
+		
+		<a href="pdf/roomservice_en.pdf">
+		  <img src="img/roomserven.jpg" alt="roomserviceen" style="width:49%">
+		</a>
+		
+        <div class="w3-container">
+          <h3>Room Service</h3>
+          <p>Desayuno: 06:00am - 11:00am</p>
+		  <p>Day Menu: 11:00am - 22:00pm</p>
+		  <p>Night Menu: 22:00pm - 06:00am</p>
+        </div>
+      </div>
+    </div>
+	
+	<!-- fitness -->
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+   
+		<img src="img/gym.jpg" alt="gym" style="width:49%">
+		<img src="img/spa.jpg" alt="spa" style="width:49%">
+        
+		<div class="w3-container">
+          <h3>Fitness</h3>
+          <p>Horario: 24hrs</p>
+		  <p>Spa: por confirmar </p>
+		  <p> <br> </p>
+        </div>
+      </div>
+    </div>
+	
+	<!-- executive lounge -->
+	<div class="w3-col m4 w3-margin-bottom">
+	  <div class="w3-light-grey">
+	  
+		<img src="img/elounge.jpg" alt="executivelounge" style="width:49%">
+		<img src="img/elounge2.jpg" alt="executivelounge" style="width:49%">
+	
+        <div class="w3-container">
+          <h3>Executive Lounge</h3>
+		  <p>Desayuno: 06:30am - 11:00am</p>
+		  <p>Snack: 09:00am - 17:00pm</p>
+		  <p>Cocktail: 17:30pm - 19:30pm</p>
+		  <p><br></p>
+        </div>
+      </div>
+    </div>
+  </div>	
+	
+  </div>
+  
+  <!-- 
+  	  *************************************************
+	  *                                               *
+	  *			     Info Asociados                   *
+      *                                               *
+	  *************************************************
+   -->
+  <div class="w3-container" id="infoasociados" style="margin-top:75px">
+    <h1 class="w3-xxxlarge" style="color: #9f1e29"><b>Info Asociados</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <div class="w3-row-padding w3-grayscale">
+    
+	<!-- obras -->
+  	<div class="w3-col m4 w3-margin-bottom">
+    	<div class="w3-light-grey">
+    		<div class="w3-container">
+          		<h3>Obras</h3>
+          		<p>Info sobre obras en el hotel</p>
+		  		<form>
+					<input type="button" value="Info" onclick="window.location.href='infoasociados/info_obras.pdf'" />
+		  		</form> 
+        	</div>
+      	</div>
+    </div>
+	
+    <!-- opera -->
+   	<div class="w3-col m4 w3-margin-bottom">
+      	<div class="w3-light-grey">
+        	<div class="w3-container">
+          		<h3>Opera</h3>
+          		<p>Link para acceder al sistema</p>
+		  		<form>
+					<input type="button" value="Opera" onclick="window.location.href='https://10.183.220.29'" />
+		  		</form> 
+        	</div>
+      	</div>
+    </div>
+	
+    <!-- internos -->
+   	<div class="w3-col m4 w3-margin-bottom">
+      	<div class="w3-light-grey">
+        	<div class="w3-container">
+          		<h3>Internos</h3>
+          		<p>Numeros de asociados</p>
+		  		<form>
+					<input type="button" value="Internos" onclick="window.location.href='infoasociados/internos.pdf'" />
+		  		</form>
+        	</div>
+      	</div>
+    </div>
+	
+	<!-- marsha -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Marsha Guarantees</h3>
+          <p> Codigos de marsha/opera </p>
+		  <form>
+			<input type="button" value="Codigos" onclick="window.location.href='infoasociados/marshacodes/Marsha_codes.html'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- alianza -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Alianza</h3>
+          <p>Información para asegurados</p>
+		  <form>
+			<input type="button" value="Medicos" onclick="window.location.href='infoasociados/alianza_med.pdf'" />
+			<input type="button" value="Instituciones" onclick="window.location.href='infoasociados/alianza_ins.pdf'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- marriott rewards -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Marriott Rewards</h3>
+          <p>Informacion MRW</p>
+		  <form>
+			<input type="button" value="Link" onclick="window.location.href='infoasociados/marriott_rewards.pdf'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- asociados -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Asociados</h3>
+          <p>Información de beneficios</p>
+		   <form>
+			<input type="button" value="Link" onclick="window.location.href=''" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- guia tv -->
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Guia TV Hotel</h3>
+          <p>Grilla de canales de TV</p>
+		  <form>
+			<input type="button" value="Canales" onclick="window.location.href='infoasociados/grilla_canales.pdf'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- lavanderia -->
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Lavanderia</h3>
+          <p>Planilla de servicio lavanderia</p>
+		  <form>
+			<input type="button" value="Link" onclick="window.location.href='infoasociados/laundry.pdf'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+    
+	<!-- salones -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Salones</h3>
+          <p>Plano de 3er piso</p>
+		   <form>
+			<input type="button" value="Link" onclick="window.location.href='infoasociados/salones.pdf'" />
+			<input type="button" value="Mamore" onclick="window.location.href='infoasociados/salon_mamore.pdf'" />
+			<input type="button" value="Rio Grande" onclick="window.location.href='infoasociados/salon_riogrande.pdf'" />
+		  </form>
+		 </div> 
+      </div>
+    </div>	
+	
+	<!-- habitaciones -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Habitaciones</h3>
+          <p>Planos de habitaciones</p>
+		   <form>
+			<input type="button" value="Link" onclick="window.location.href='infoasociados/distribucion_marriott.pdf'" />
+			<input type="button" value="Link" onclick="window.location.href='infoasociados/plano_habitaciones.pdf'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- flight radar -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Flight Radar</h3>
+          <p>Entradas - Salidas VVI</p>
+		  <form>
+			<input type="button" value="Salidas" onclick="window.location.href='https://www.flightradar24.com/data/airports/vvi/departures'" />
+			<input type="button" value="Entradas" onclick="window.location.href='https://www.flightradar24.com/data/airports/vvi/arrivals'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- trip advisor -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Trip Advisor</h3>
+          <p>Encuestas para el Hotel</p>
+		  <form>
+			<input type="button" value="Link" onclick="window.location.href='https://www.tripadvisor.es/UserReviewEdit-g297317-d13451944-Marriott_Santa_Cruz_de_la_Sierra_Hotel-Santa_Cruz_Santa_Cruz_Department.html'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- emergencias -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Emergencias</h3>
+          <p>En casos de emergencia</p>
+		  <form>
+			<input type="button" value="Link" onclick="window.location.href='http://www.mia.bo/'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- linea de etica -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Linea de etica</h3>
+          <p>Linea de etica para asociados</p>
+		   <form>
+			<input type="button" value="Link" onclick="window.location.href='infoasociados/lineaetica.pdf'" />
+		  </form>
+        </div>
+      </div>
+    </div>
+	
+	<!-- transerencias telefonicas -->
+	<div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container">
+          <h3>Transferencias</h3>
+          <p>Manual transfer llamadas</p>
+		  <form>
+			<input type="button" value="Link" onclick="window.location.href='infoasociados/manual_transferencias.pdf'" />
+		  </form>
+        </div>
+      </div>
+    </div>		
+	
+  </div>
+
+  <!-- 
+  	  ****************************
+  	  *          Extras          *
+	  *                          *                    
+  	  ****************************
+  -->
+  <div class="w3-container" id="extras" style="margin-top:75px">
+    <h1 class="w3-xxxlarge" style="color: #9f1e29"><b>Extras</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in to search">
+  <p><br></p>
+  
+  <div class="w3-row-padding w3-grayscale">
+  	
+	<table id="myTable">
+  		
+		<!-- restaurantes -->
+		<tr>
+    		<td>Restaurantes</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/restaurantes.pdf'" />
+		  		</form>
+			</td>
+ 		</tr>
+  		<!-- peluquerias -->
+		<tr>
+    		<td>Peluquerias</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/peluquerias.pdf'" />
+		  		</form>
+			</td>
+  		</tr>
+		<!-- aerolineas -->
+  		<tr>
+   			<td>Aerolineas</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/aerolineas.pdf'" />
+		  		</form>
+			</td>
+  		</tr>
+		<!-- auto rentals -->
+  		<tr>
+    		<td>Autos Rental</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/auto_rental.pdf'" />
+		  		</form>
+			</td>
+  		</tr>
+		<!-- bares -->
+		<tr>
+    		<td>Bares</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/bares.pdf'" />
+		  		</form>
+			</td>
+  		</tr>
+		<!-- tours -->     
+		<tr>
+    		<td>Tours</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/.pdf'" />
+		  		</form>
+			</td>
+  		</tr>   
+		<!-- lavanderia -->  
+		<tr>
+    		<td>Lavanderias</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/lavanderias.pdf'" />
+		  		</form>
+			</td>
+  		</tr>   
+		<!-- centros comerciales -->  
+		<tr>
+    		<td>Centros Comerciales</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/centroscommerciales.pdf'" />
+		  		</form>
+			</td>
+  		</tr>
+		<!-- deportes -->     
+		<tr>
+    		<td>Deportes</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/deportes.pdf'" />
+		  		</form>
+			</td>
+  		</tr> 
+		<!-- bike rental -->    
+		<tr>
+    		<td>Bike Rental</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/bicicletas_alquiler.pdf'" />
+		  		</form>
+			</td>
+  		</tr>  
+		<!-- florerias -->   
+		<tr>
+    		<td>Florerias</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/florerias.pdf'" />
+		  		</form>
+			</td>
+  		</tr>
+		<!-- supermercados -->     
+		<tr>
+    		<td>Supermercados</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/supermercados.pdf'" />
+		  		</form>
+			</td>
+  		</tr> 
+		<!-- teatros -->    
+		<tr>
+    		<td>Teatros</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/teatros.pdf'" />
+		  		</form>
+			</td>
+  		</tr>  
+		<!-- museos -->   
+		<tr>
+    		<td>Museos</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/museos.pdf'" />
+		  		</form>
+			</td>
+  		</tr>
+		<!-- atracciones -->
+		<tr>
+    		<td>Atracciones</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/atracciones.pdf'" />
+		  		</form>
+			</td>
+  		</tr>
+		<!-- taxis -->
+		<tr>
+    		<td>Taxis</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/taxis.pdf'" />
+		  		</form>
+			</td>
+  		</tr> 
+		<!-- niñeras -->
+		<tr>
+    		<td>Niñeras</td>
+    		<td>
+				<form>
+					<input type="button" value="Link" onclick="window.location.href='extras/nineras.pdf'" />
+		  		</form>
+			</td>
+  		</tr>       
+		                                                                                          
+	</table>
+
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px; background-color: #9f1e29"> >
+	<p class="w3-right">Marriott Santa Cruz de la Siera</p>
+</div>	
+</body>
+</html>
