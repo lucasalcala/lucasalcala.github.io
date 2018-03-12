@@ -1,7 +1,7 @@
 
 /*
 	Script that validates the username and password from the users input
-
+	
 */
 
 // Variable to count number of attempts.
