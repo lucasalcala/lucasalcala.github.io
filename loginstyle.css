@@ -1,5 +1,6 @@
 /* Below line is used for online Google font */
 @import url(http://fonts.googleapis.com/css?family=Raleway);
+
 h2{
 background-color: #cccccc;
 padding: 30px 35px;
@@ -28,7 +29,7 @@ font-family: raleway;
 float:left;
 margin-top:50px;
 }
-input[type=text],input[type=password]{
+input[type=text],input[type=password],input[type=password]{
 width: 100%;
 height: 40px;
 padding: 5px;

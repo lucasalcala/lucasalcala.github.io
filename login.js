@@ -15,7 +15,7 @@ function validate()
 	
 	if ( username == "marriott" && password == "marriott2018")
 	{
-		window.location = "home.html"; // Redirecting to other page.
+		window.location = "main.html"; // Redirecting to other page.
 		return false;
 	}
 	else
