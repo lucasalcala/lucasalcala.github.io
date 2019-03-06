@@ -1,6 +1,6 @@
 body
 {
-    background-color: #FCFCFC;
+    background-color: #cecece;
 }
 
 a
@@ -31,7 +31,7 @@ hr
 {
     text-align: center;
     font-family: Verdana;
-    color:#0000FF;
+    color: #000000;
 }
 
 .game-container
