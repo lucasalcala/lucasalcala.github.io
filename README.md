@@ -8,4 +8,4 @@ I will start uploading small fun projects I made, guides on programming data str
 Graphical interface, where you can switch from AI to single player mode so you can try it yourself. AI based on evolutionary algorithms. 
 Genetic algorithm, currently testing. For fun and research only. Feel free to control+c and control+v
 
-<a href="lucasalcala.github.io/demo.html">Go to Tetris AI</a>
+<a href="https://lucasalcala.github.io/demo.html">Go to Tetris AI</a>
