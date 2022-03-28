@@ -1,10 +1,11 @@
+#welcome to my repository# 
+
+I will start uploading small fun projects I made, guides on programming data structures and algorithms, and others
+
+
 #Tetris AI
- graphical interface, where you can switch from AI to single player mode so you can try it yourself.
 
-#AI based on evolutionary algorithms. 
-Genetic algorithm, currently testing
+Graphical interface, where you can switch from AI to single player mode so you can try it yourself. AI based on evolutionary algorithms. 
+Genetic algorithm, currently testing. For fun and research only. Feel free to control+c and control+v
 
-#Tuning
-To tune, open up the Developer Console in the web browser and run the command 'new Tuner().tune();'.
-
-# For fun and research only. Feel free to control+c and control+v
+lucasalcala.github.io/demo.html
